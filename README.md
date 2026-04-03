@@ -19,25 +19,21 @@ This project was built to understand how trading systems actually work under the
 - Logging system (file + console)  
 - Clean, modular code structure  
 
----
-
 ## Project Structure
 
-
+```
 trading_bot/
 ├── bot/
-│ ├── client.py # API authentication, signing, HTTP requests
-│ ├── orders.py # Order logic and response formatting
-│ ├── validators.py # Input validation
-│ └── logging_config.py # Logging setup
-├── logs/ # Runtime logs (auto-created)
-├── cli.py # CLI entry point
-├── .env.example # API key template
+│   ├── client.py          # API authentication, signing, HTTP requests
+│   ├── orders.py          # Order logic and response formatting
+│   ├── validators.py      # Input validation
+│   └── logging_config.py  # Logging setup
+├── logs/                  # Runtime logs (auto-created)
+├── cli.py                 # CLI entry point
+├── .env.example           # API key template
 ├── requirements.txt
 └── README.md
-
-
----
+```
 
 ## Setup
 
