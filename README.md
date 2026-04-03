@@ -29,32 +29,38 @@ I built this project to understand how trading systems actually work — especia
     ├── requirements.txt
     └── README.md
 
-## Setup
+ ## Setup
 
 1. Get API keys from:
 https://testnet.binancefuture.com
 
 2. Clone the repository:
 
-git clone https://github.com/<your-username>/binance-futures-bot.git
+```bash
+git clone https://github.com/SHRISHTI1414/binance-futures-bot.git
 cd binance-futures-bot
+```
 
 3. Install dependencies:
 
+```bash
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+```
 
 4. Configure environment variables:
 
+```bash
 cp .env.example .env
+```
 
 Add your keys:
 
+```
 BINANCE_TESTNET_API_KEY=your_key_here
 BINANCE_TESTNET_API_SECRET=your_secret_here
-
----
+```
 
 ## Usage
 
