@@ -64,17 +64,23 @@ BINANCE_TESTNET_API_SECRET=your_secret_here
 
 ## Usage
 
+ ## Usage
+
 Example:
 
+```bash
 python cli.py --symbol BTCUSDT --side BUY --type MARKET --quantity 0.001
+```
 
 ---
 
-## Logging
+ ## Logging
 
 Logs are stored in:
 
+```
 logs/trading_bot.log
+```
 
 ---
 
