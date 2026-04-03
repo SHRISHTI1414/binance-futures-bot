@@ -2,7 +2,7 @@
 
 A CLI-based trading bot for placing orders on the Binance Futures Testnet (USDT-M).
 
-This project was built to understand how trading systems actually work under the hood — especially API authentication, request signing, and order execution — without relying on external SDKs. All interactions are done using raw REST calls (`requests`) to keep things transparent and controllable.
+This project was built to understand how trading systems work under the hood — especially API authentication, request signing, and order execution — without relying on external SDKs. All interactions are done using raw REST calls (`requests`) to keep things transparent and controllable.
 
 ---
 
@@ -19,21 +19,25 @@ This project was built to understand how trading systems actually work under the
 - Logging system (file + console)  
 - Clean, modular code structure  
 
+---
+
 ## Project Structure
 
-```
+
 trading_bot/
 ├── bot/
-│   ├── client.py          # API authentication, signing, HTTP requests
-│   ├── orders.py          # Order logic and response formatting
-│   ├── validators.py      # Input validation
-│   └── logging_config.py  # Logging setup
-├── logs/                  # Runtime logs (auto-created)
-├── cli.py                 # CLI entry point
-├── .env.example           # API key template
+│ ├── client.py # API authentication, signing, HTTP requests
+│ ├── orders.py # Order logic and response formatting
+│ ├── validators.py # Input validation
+│ └── logging_config.py # Logging setup
+├── logs/ # Runtime logs (auto-created)
+├── cli.py # CLI entry point
+├── .env.example # API key template
 ├── requirements.txt
 └── README.md
-```
+
+
+---
 
 ## Setup
 
@@ -86,15 +90,15 @@ This shows detailed API request and response logs.
 
 CLI Reference
 Flag	Required	Description
---symbol	✅	Trading pair (e.g. BTCUSDT)
---side	✅	BUY or SELL
---type	✅	MARKET / LIMIT / STOP / STOP_MARKET
---quantity	✅	Order quantity
---price	⚠️	Required for LIMIT / STOP
---stop-price	⚠️	Required for STOP / STOP_MARKET
---api-key	❌	Overrides environment variable
---api-secret	❌	Overrides environment variable
---log-level	❌	DEBUG / INFO / WARNING / ERROR
+--symbol	Yes	Trading pair (e.g. BTCUSDT)
+--side	Yes	BUY or SELL
+--type	Yes	MARKET / LIMIT / STOP / STOP_MARKET
+--quantity	Yes	Order quantity
+--price	Conditional	Required for LIMIT / STOP
+--stop-price	Conditional	Required for STOP / STOP_MARKET
+--api-key	Optional	Overrides environment variable
+--api-secret	Optional	Overrides environment variable
+--log-level	Optional	DEBUG / INFO / WARNING / ERROR
 Logging
 
 Logs are stored in:
@@ -119,6 +123,8 @@ Tech Stack
 Python 3.9+
 requests
 python-dotenv
-Note
-
-This is a learning-focused project designed to understand trading APIs and system design. It is not intended to be a profit-generating bot.
+What I Learned
+How API request signing works (HMAC SHA256)
+Handling real-world API errors and edge cases
+Structuring backend systems into modular components
+Importance of validation before hitting external APIs
