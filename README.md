@@ -15,23 +15,19 @@ I built this project to understand how trading systems actually work — especia
 - Logging system (file + console)  
 - Clean and modular code structure  
 
----
+ ## Project Structure
 
-## Project Structure
-
-trading_bot/
-├── bot/
-│   ├── client.py
-│   ├── orders.py
-│   ├── validators.py
-│   └── logging_config.py
-├── logs/
-├── cli.py
-├── .env.example
-├── requirements.txt
-└── README.md
-
----
+    trading_bot/
+    ├── bot/
+    │   ├── client.py
+    │   ├── orders.py
+    │   ├── validators.py
+    │   └── logging_config.py
+    ├── logs/
+    ├── cli.py
+    ├── .env.example
+    ├── requirements.txt
+    └── README.md
 
 ## Setup
 
